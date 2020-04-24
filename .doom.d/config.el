@@ -56,6 +56,11 @@
   (smartparens-global-mode -1))
 
 (use-package haskell-mode
+  :init
+  ;; Mark variables and symbols as safe
+  (put 'haskell-process-args-stack-ghci 'safe-local-variable #'listp)
+  (put 'dante-target  'safe-local-variable #'stringp)
+  ;; (put 'dante-methods 'safe-local-variable #'listp)
   :config
   (setq haskell-stylish-on-save t
         haskell-indentation-layout-offset 4
