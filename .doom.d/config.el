@@ -26,9 +26,13 @@
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-one)
 
+
+;;;; # Org Mode Configuration
+
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "/run/user/1000/keybase/kbfs/private/jakzale/org")
+(setq org-directory "/keybase/private/jakzale/org")
+
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -55,16 +59,15 @@
 (after! smartparens
   (smartparens-global-mode -1))
 
-(use-package haskell-mode
-  :init
-  ;; Mark variables and symbols as safe
-  (put 'haskell-process-args-stack-ghci 'safe-local-variable #'listp)
-  (put 'dante-target  'safe-local-variable #'stringp)
-  ;; (put 'dante-methods 'safe-local-variable #'listp)
-  :config
-  (setq haskell-stylish-on-save t
-        haskell-indentation-layout-offset 4
-        haskell-indentation-left-offset 4
-        haskell-indentation-starter-offset 4
-        haskell-indentation-where-post-offset 4
-        haskell-indentation-where-pre-offset 4))
+;; Define safe local variables for haskell-mode
+(put 'haskell-process-args-stack-ghci 'safe-local-variable #'listp)
+(put 'dante-target  'safe-local-variable #'stringp)
+;; (put 'dante-methods 'safe-local-variable #'listp)
+
+;; Configure Haskell mode
+(setq haskell-stylish-on-save t
+      haskell-indentation-layout-offset 4
+      haskell-indentation-left-offset 4
+      haskell-indentation-starter-offset 4
+      haskell-indentation-where-post-offset 4
+      haskell-indentation-where-pre-offset 4)
