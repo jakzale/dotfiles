@@ -69,7 +69,8 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git stack)
+plugins=(git stack
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -101,5 +102,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
-# Add .local/bin
-export PATH="$HOME/.local/bin:$PATH"
+# include cargo if it exists
+if [ -d "$HOME/.cargo/bin" ] ; then
+    PATH="$HOME/.cargo/bin:$PATH"
+fi
