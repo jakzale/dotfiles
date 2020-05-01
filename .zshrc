@@ -104,5 +104,11 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # include cargo if it exists
 if [ -d "$HOME/.cargo/bin" ] ; then
-    PATH="$HOME/.cargo/bin:$PATH"
+    export PATH="$HOME/.cargo/bin:$PATH"
+fi
+
+# include go if it exists
+if [ -d "$HOME/.local/go" ] ; then
+   export PATH="$HOME/.local/go/bin:$PATH"
+   export GOPATH="$HOME/Developer/go"
 fi
