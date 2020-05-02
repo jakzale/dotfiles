@@ -17,7 +17,9 @@ if dein#load_state('/home/jakub/.cache/dein')
   " Add or remove your plugins here like this:
   "call dein#add('Shougo/neosnippet.vim')
   "call dein#add('Shougo/neosnippet-snippets')
+  call dein#add('neovim/nvim-lsp')
   call dein#add('simnalamburt/vim-mundo')
+  call dein#add('tpope/vim-fugitive')
   call dein#add('vim-airline/vim-airline')
   call dein#add('vim-airline/vim-airline-themes')
 
@@ -53,7 +55,7 @@ nnoremap <space> <nop>
 let mapleader = "\<space>"
 
 " Map Mundo
-nnoremap <leader>ut :MundoToggle<cr>
+nnoremap <leader>ut <cmd>MundoToggle<cr>
 
 " Use Cascadia Code
 set guifont=Cascadia\ Code\ PL:h16
