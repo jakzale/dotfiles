@@ -2,6 +2,11 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Prepend $HOME/.local/bin to $PATH
+if [[ "$PATH" != *"$HOME/.local/bin"* ]] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
 # Path to your oh-my-zsh installation.
 export ZSH="/home/jakub/.oh-my-zsh"
 
@@ -100,6 +105,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
 
 # include cargo if it exists
 if [ -d "$HOME/.cargo/bin" ] ; then
