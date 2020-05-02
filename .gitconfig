@@ -1,6 +1,12 @@
 [alias]
 	co = checkout
 
+# Global user settings
+#   useful when gitt-ing outside the usual directory tree
+[user]
+	name = Jakub Zalewski
+	email = jakzale@gmail.com
+
 # Private projects
 [includeIf "gitdir:~/Developer/"]
 	path = ~/Developer/.gitconfig
@@ -12,3 +18,4 @@
 # IOHK projects
 [includeIf "gitdir:~/IOHK/"]
 	path = ~/IOHK/.gitconfig
+
