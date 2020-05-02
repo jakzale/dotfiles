@@ -45,10 +45,16 @@ inoremap jk <esc>
 " Enable persistent undo
 set undofile
 
+" Allow switching unchanged buffers
+set hidden
+
 " Make space the local leader
 nnoremap <space> <nop>
 let mapleader = "\<space>"
 
 " Map Mundo
 nnoremap <leader>ut :MundoToggle<cr>
+
+" Use Cascadia Code
+set guifont=Cascadia\ Code\ PL:h16
 
