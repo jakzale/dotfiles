@@ -1,0 +1,8 @@
+[user]
+	name = Jakub Zalewski
+	email = jakub.zalewski@iohk.io
+	signingkey = B7E7CE31
+
+[commit]
+	gpgsign = true
+

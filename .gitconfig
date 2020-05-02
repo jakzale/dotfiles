@@ -1,5 +1,14 @@
-[user]
-	name = Jakub Zalewski
-	email = jakzale@gmail.com
 [alias]
 	co = checkout
+
+# Private projects
+[includeIf "gitdir:~/Developer/"]
+	path = ~/Developer/.gitconfig
+
+# Pozitive.dev projects
+[includeIf "gitdir:~/Pozitive/"]
+	path = ~/Pozitive/.gitconfig
+
+# IOHK projects
+[includeIf "gitdir:~/IOHK/"]
+	path = ~/IOHK/.gitconfig
