@@ -62,15 +62,14 @@ DISABLE_AUTO_UPDATE="true"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+# ZSH_CUSTOM="${HOME}/.config/oh-my-zsh"
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git stack
-)
+plugins=(git stack cargo)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -104,11 +103,11 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # include cargo if it exists
 if [ -d "$HOME/.cargo/bin" ] ; then
-    export PATH="$HOME/.cargo/bin:$PATH"
+    PATH="$HOME/.cargo/bin:$PATH"
 fi
 
 # include go if it exists
 if [ -d "$HOME/.local/go" ] ; then
-   export PATH="$HOME/.local/go/bin:$PATH"
-   export GOPATH="$HOME/Developer/go"
+   PATH="$HOME/.local/go/bin:$PATH"
+   GOPATH="$HOME/Developer/go"
 fi
