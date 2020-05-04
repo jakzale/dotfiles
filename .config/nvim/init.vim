@@ -85,7 +85,7 @@ set noshowmode
 
 " Window Tree (netrw)
 let g:netrw_list_hide=netrw_gitignore#Hide().'^.git/$'
-nnoremap <leader>le <cmd>40Lex<cr>
+nnoremap <leader>le <cmd>20Lex<cr>
 
 " Sourcing init vim faster
 " source file
