@@ -13,11 +13,13 @@ if dein#load_state('/home/jakub/.cache/dein')
   " Add or remove your plugins here like this:
   "call dein#add('Shougo/neosnippet.vim')
   "call dein#add('Shougo/neosnippet-snippets')
+  call dein#add('joshdick/onedark.vim')
   call dein#add('junegunn/fzf.vim')
   call dein#add('neovim/nvim-lsp')
   call dein#add('neovimhaskell/haskell-vim')
   call dein#add('simnalamburt/vim-mundo')
   call dein#add('tpope/vim-fugitive')
+  call dein#add('tpope/vim-repeat')
   call dein#add('tpope/vim-surround')
   call dein#add('vim-airline/vim-airline')
   call dein#add('vim-airline/vim-airline-themes')
@@ -30,11 +32,6 @@ endif
 " Required:
 filetype plugin indent on
 syntax enable
-
-" If you want to install not installed plugins on startup.
-"if dein#check_install()
-"  call dein#install()
-"endif
 
 "End dein Scripts-------------------------
 
@@ -66,6 +63,9 @@ set shiftwidth=4
 " use spaces instead of tabs
 set expandtab
 
+" use window titles
+set title
+
 " Load fzf support
 source /usr/share/doc/fzf/examples/fzf.vim
 
@@ -76,4 +76,7 @@ endif
 nnoremap <leader>pf <cmd>Files<cr>
 nnoremap <leader>pb <cmd>Buffers<cr>
 nnoremap <leader>ps <cmd>Rg<cr>
+
+let g:airline_theme='onedark'
+colorscheme onedark
 
