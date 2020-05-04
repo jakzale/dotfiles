@@ -1,3 +1,4 @@
+# I have a sentiment for the `co` command
 [alias]
 	co = checkout
 
@@ -6,6 +7,10 @@
 [user]
 	name = Jakub Zalewski
 	email = jakzale@gmail.com
+
+# Use neovim
+[core]
+	editor = nvim
 
 # Private projects
 [includeIf "gitdir:~/Developer/"]
