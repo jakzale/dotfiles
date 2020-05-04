@@ -80,3 +80,16 @@ nnoremap <leader>ps <cmd>Rg<cr>
 let g:airline_theme='onedark'
 colorscheme onedark
 
+" Do not display the -- INSERT -- in echo area
+set noshowmode
+
+" Window Tree (netrw)
+let g:netrw_list_hide=netrw_gitignore#Hide().'^.git/$'
+nnoremap <leader>le <cmd>40Lex<cr>
+
+" Sourcing init vim faster
+" source file
+nnoremap <leader>vs <cmd>source %<cr>
+" source visual range
+vnoremap <leader>vs y:@"<cr>
+
