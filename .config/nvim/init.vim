@@ -1,8 +1,4 @@
 "dein Scripts-----------------------------
-if &compatible
-  set nocompatible               " Be iMproved
-endif
-
 " Required:
 set runtimepath+=/home/jakub/.cache/dein/repos/github.com/Shougo/dein.vim
 
@@ -17,9 +13,12 @@ if dein#load_state('/home/jakub/.cache/dein')
   " Add or remove your plugins here like this:
   "call dein#add('Shougo/neosnippet.vim')
   "call dein#add('Shougo/neosnippet-snippets')
+  call dein#add('junegunn/fzf.vim')
   call dein#add('neovim/nvim-lsp')
+  call dein#add('neovimhaskell/haskell-vim')
   call dein#add('simnalamburt/vim-mundo')
   call dein#add('tpope/vim-fugitive')
+  call dein#add('tpope/vim-surround')
   call dein#add('vim-airline/vim-airline')
   call dein#add('vim-airline/vim-airline-themes')
 
@@ -59,4 +58,22 @@ nnoremap <leader>ut <cmd>MundoToggle<cr>
 
 " Use Cascadia Code
 set guifont=Cascadia\ Code\ PL:h16
+
+" show existing tabs with 4 spaces
+set tabstop=4
+" indent by 4 when pressing >
+set shiftwidth=4
+" use spaces instead of tabs
+set expandtab
+
+" Load fzf support
+source /usr/share/doc/fzf/examples/fzf.vim
+
+if expand("$TERM") ==# "alacritty" || expand("$TERM") ==# "xterm-256"
+    set termguicolors
+endif
+
+nnoremap <leader>pf <cmd>Files<cr>
+nnoremap <leader>pb <cmd>Buffers<cr>
+nnoremap <leader>ps <cmd>Rg<cr>
 
