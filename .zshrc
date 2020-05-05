@@ -117,3 +117,6 @@ if [ -d "$HOME/.local/go" ] ; then
    PATH="$HOME/.local/go/bin:$PATH"
    GOPATH="$HOME/Developer/go"
 fi
+
+export EDITOR='nvim'
+
