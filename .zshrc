@@ -106,7 +106,6 @@ source $ZSH/oh-my-zsh.sh
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
-
 # include cargo if it exists
 if [ -d "$HOME/.cargo/bin" ] ; then
     PATH="$HOME/.cargo/bin:$PATH"
@@ -122,4 +121,8 @@ export EDITOR='nvim'
 
 # Setup gh completion
 eval $(gh completion --shell zsh)
+
+# Quick hack to unlock default key for gpg
+export GPG_TTY=$(tty)
+alias gpg-unlock='echo "" | gpg -s > /dev/null'
 
