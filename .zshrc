@@ -120,3 +120,6 @@ fi
 
 export EDITOR='nvim'
 
+# Setup gh completion
+eval $(gh completion --shell zsh)
+
