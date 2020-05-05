@@ -1,4 +1,9 @@
 "dein Scripts-----------------------------
+
+if &compatible
+    set nocompatible
+endif
+
 " Required:
 set runtimepath+=/home/jakub/.cache/dein/repos/github.com/Shougo/dein.vim
 
@@ -13,16 +18,19 @@ if dein#load_state('/home/jakub/.cache/dein')
   " Add or remove your plugins here like this:
   "call dein#add('Shougo/neosnippet.vim')
   "call dein#add('Shougo/neosnippet-snippets')
+  call dein#add('airblade/vim-gitgutter')
   call dein#add('joshdick/onedark.vim')
   call dein#add('junegunn/fzf.vim')
   call dein#add('neovim/nvim-lsp')
   call dein#add('neovimhaskell/haskell-vim')
   call dein#add('simnalamburt/vim-mundo')
+  call dein#add('tomtom/tcomment_vim')
   call dein#add('tpope/vim-fugitive')
   call dein#add('tpope/vim-repeat')
   call dein#add('tpope/vim-surround')
   call dein#add('vim-airline/vim-airline')
   call dein#add('vim-airline/vim-airline-themes')
+  call dein#add('jeffkreeftmeijer/vim-numbertoggle')
 
   " Required:
   call dein#end()
@@ -34,6 +42,7 @@ filetype plugin indent on
 syntax enable
 
 "End dein Scripts-------------------------
+
 
 
 " First of all, make jk exit
@@ -66,12 +75,13 @@ set expandtab
 " use window titles
 set title
 
-" Load fzf support
-source /usr/share/doc/fzf/examples/fzf.vim
 
 if expand("$TERM") ==# "alacritty" || expand("$TERM") ==# "xterm-256"
     set termguicolors
 endif
+
+" Load fzf support
+source /usr/share/doc/fzf/examples/fzf.vim
 
 nnoremap <leader>pf <cmd>Files<cr>
 nnoremap <leader>pb <cmd>Buffers<cr>
@@ -92,4 +102,10 @@ nnoremap <leader>le <cmd>20Lex<cr>
 nnoremap <leader>vs <cmd>source %<cr>
 " source visual range
 vnoremap <leader>vs y:@"<cr>
+
+
+nnoremap <leader>gs <cmd>Gstatus<cr>
+
+" Hybrid numbering
+set number relativenumber
 
