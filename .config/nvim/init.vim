@@ -19,6 +19,8 @@ if dein#load_state('/home/jakub/.cache/dein')
   "call dein#add('Shougo/neosnippet.vim')
   "call dein#add('Shougo/neosnippet-snippets')
   call dein#add('airblade/vim-gitgutter')
+  call dein#add('autozimu/LanguageClient-neovim', {'rev': 'next', 'build': 'bash install.sh'})
+  call dein#add('jeffkreeftmeijer/vim-numbertoggle')
   call dein#add('joshdick/onedark.vim')
   call dein#add('junegunn/fzf.vim')
   call dein#add('neovim/nvim-lsp')
@@ -30,7 +32,6 @@ if dein#load_state('/home/jakub/.cache/dein')
   call dein#add('tpope/vim-surround')
   call dein#add('vim-airline/vim-airline')
   call dein#add('vim-airline/vim-airline-themes')
-  call dein#add('jeffkreeftmeijer/vim-numbertoggle')
 
   " Required:
   call dein#end()
@@ -108,4 +109,14 @@ nnoremap <leader>gs <cmd>Gstatus<cr>
 
 " Hybrid numbering
 set number relativenumber
+
+" Language server config
+let g:LanguageClient_serverCommands = {
+    \ 'rust'    : ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+    \ 'haskell' : ['~/.local/bin/hie-wrapper', '--lsp'],
+    \ }
+
+let g:LanguageClient_rootMarkers = {
+    \ 'haskell' : ['stack.yaml', '*.cabal'],
+    \ }
 
