@@ -25,6 +25,7 @@ if dein#load_state('/home/jakub/.cache/dein')
   call dein#add('junegunn/fzf.vim')
   call dein#add('neovim/nvim-lsp')
   call dein#add('neovimhaskell/haskell-vim')
+  call dein#add('ntpeters/vim-better-whitespace')
   call dein#add('simnalamburt/vim-mundo')
   call dein#add('tomtom/tcomment_vim')
   call dein#add('tpope/vim-fugitive')
@@ -119,4 +120,10 @@ let g:LanguageClient_serverCommands = {
 let g:LanguageClient_rootMarkers = {
     \ 'haskell' : ['stack.yaml', '*.cabal'],
     \ }
+
+" whitespace config
+let s:colors = onedark#GetColors()
+
+let g:better_whitespace_ctermcolor=s:colors.red.cterm
+let g:better_whitespace_guicolor=s:colors.red.gui
 
