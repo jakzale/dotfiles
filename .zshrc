@@ -126,3 +126,4 @@ eval $(gh completion --shell zsh)
 export GPG_TTY=$(tty)
 alias gpg-unlock='echo "" | gpg -s > /dev/null'
 
+alias nec='nvim +Files\ ~/.config'
