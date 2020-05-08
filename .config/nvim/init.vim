@@ -121,6 +121,19 @@ let g:LanguageClient_rootMarkers = {
     \ 'haskell' : ['stack.yaml', '*.cabal'],
     \ }
 
+function s:LC_maps()
+    if has_key(g:LanguageClient_serverCommands, &filetype)
+        nnoremap <buffer> <silent> K  <cmd>call LanguageClient#textDocument_hover()<cr>
+        nnoremap <buffer> <silent> gd <cmd>call LanguageClient#textDocument_definition()<cr>
+        nnoremap <buffer> <silent> <leader>lr <cmd>call LanguageClient#textDocument_rename()<cr>
+    endif
+endfunction
+
+augroup LSP
+    autocmd!
+    autocmd FileType * call s:LC_maps()
+augroup END
+
 " whitespace config
 let s:colors = onedark#GetColors()
 
