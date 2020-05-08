@@ -18,6 +18,7 @@ if dein#load_state('/home/jakub/.cache/dein')
   " Add or remove your plugins here like this:
   "call dein#add('Shougo/neosnippet.vim')
   "call dein#add('Shougo/neosnippet-snippets')
+  call dein#add('Shougo/deoplete.nvim/')
   call dein#add('airblade/vim-gitgutter')
   call dein#add('autozimu/LanguageClient-neovim', {'rev': 'next', 'build': 'bash install.sh'})
   call dein#add('jeffkreeftmeijer/vim-numbertoggle')
@@ -140,3 +141,5 @@ let s:colors = onedark#GetColors()
 let g:better_whitespace_ctermcolor=s:colors.red.cterm
 let g:better_whitespace_guicolor=s:colors.red.gui
 
+" Enable deoplete
+let g:deoplete#enable_at_startup = 1
