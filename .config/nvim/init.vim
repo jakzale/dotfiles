@@ -122,6 +122,7 @@ let g:LanguageClient_rootMarkers = {
     \ 'haskell' : ['stack.yaml', '*.cabal'],
     \ }
 
+
 function s:LC_maps()
     if has_key(g:LanguageClient_serverCommands, &filetype)
         nnoremap <buffer> <silent> K  <cmd>call LanguageClient#textDocument_hover()<cr>
@@ -138,8 +139,9 @@ augroup END
 " whitespace config
 let s:colors = onedark#GetColors()
 
-let g:better_whitespace_ctermcolor=s:colors.red.cterm
-let g:better_whitespace_guicolor=s:colors.red.gui
+let g:better_whitespace_ctermcolor = s:colors.red.cterm
+let g:better_whitespace_guicolor   = s:colors.red.gui
 
 " Enable deoplete
 let g:deoplete#enable_at_startup = 1
+
