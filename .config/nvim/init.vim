@@ -30,6 +30,7 @@ if dein#load_state('/home/jakub/.cache/dein')
   call dein#add('simnalamburt/vim-mundo')
   call dein#add('tomtom/tcomment_vim')
   call dein#add('tpope/vim-fugitive')
+  call dein#add('tpope/vim-markdown')
   call dein#add('tpope/vim-repeat')
   call dein#add('tpope/vim-surround')
   call dein#add('vim-airline/vim-airline')
@@ -145,3 +146,5 @@ let g:better_whitespace_guicolor   = s:colors.red.gui
 " Enable deoplete
 let g:deoplete#enable_at_startup = 1
 
+" Markdown
+let g:markdown_folding = 1
