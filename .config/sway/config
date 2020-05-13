@@ -92,7 +92,7 @@ input type:keyboard {
 }
 
 # Update configuration for mice
-input type:mouse {
+input type:pointer {
     natural_scroll enabled
 }
 
