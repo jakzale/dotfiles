@@ -130,3 +130,20 @@ alias nec='nvim +Files\ ~/.config'
 
 # NeoVim server config
 export NVIM_LISTEN_ADDRESS="${XDG_RUNTIME_DIR}/nvimsocket"
+
+# Scale the UI up
+function sway-scaled () {
+    local config_dir="${XDG_CONFIG_HOME:-$HOME/.config}"
+    local alacritty_config="${config_dir}/alacritty/alacritty.yml"
+    # Turn on scaling
+    swaymsg -- output eDP-1 scale 2
+    sed --in-place 's/size: 16.0/size: 12.0/' "${alacritty_config}"
+}
+
+function sway-unscaled () {
+    local config_dir="${XDG_CONFIG_HOME:-$HOME/.config}"
+    local alacritty_config="${config_dir}/alacritty/alacritty.yml"
+    # Turn off scaling
+    swaymsg -- output eDP-1 scale 1
+    sed --in-place 's/size: 12.0/size: 16.0/' "${alacritty_config}"
+}
