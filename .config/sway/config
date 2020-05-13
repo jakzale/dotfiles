@@ -239,6 +239,9 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+# Lock screen
+bindsym $mod+Escape exec swaylock
+
 #
 # Status Bar:
 #
