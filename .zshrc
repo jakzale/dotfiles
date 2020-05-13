@@ -127,3 +127,6 @@ export GPG_TTY=$(tty)
 alias gpg-unlock='echo "" | gpg -s > /dev/null'
 
 alias nec='nvim +Files\ ~/.config'
+
+# NeoVim server config
+export NVIM_LISTEN_ADDRESS="${XDG_RUNTIME_DIR}/nvimsocket"
