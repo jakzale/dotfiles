@@ -32,3 +32,5 @@ include /usr/share/taskwarrior/dark-gray-blue-256.theme
 # Use holidays in Poland
 include /usr/share/taskwarrior/holidays.pl-PL.rc
 
+context.iohk=+iohk
+context.phd=+phd
