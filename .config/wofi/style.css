@@ -1,0 +1,46 @@
+/* wofi window */
+#window {
+}
+
+/* box that contains everything */
+#outer-box {
+}
+
+/* search bar */
+#input {
+    margin: 10px;
+}
+
+/* scrolling window containing all the entries */
+#scroll {
+    margin-left:   10px;
+    margin-right:  10px;
+    margin-bottom: 10px;
+}
+
+/* box containing all the entries */
+#inner-box {
+}
+
+/* images in entries */
+#img {
+    margin-right: 10px;
+}
+
+/* text in entries */
+#text {
+}
+
+/* TODO verify those work */
+/* all entries */
+#entry {
+}
+
+/* selected entries */
+#entry:selected {
+}
+
+/* unselected entries */
+#entry:unselected {
+}
+
