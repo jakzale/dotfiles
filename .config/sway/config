@@ -45,8 +45,8 @@ output DP-4 {
 output eDP-1 {
     res 2560x1440
     pos 1440 1080
-    scale 1.5
-    scale_filter nearest
+    scale 2
+    scale_filter smart
 }
 
 
