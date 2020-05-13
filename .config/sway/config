@@ -18,7 +18,7 @@ set $term x-terminal-emulator
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu dmenu_path | j4-dmenu-desktop --dmenu="dmenu -i" | xargs swaymsg exec --
 
 ### Output configuration
 #
@@ -28,9 +28,9 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 # Built in screen
 workspace 1 output eDP-1
 # Left screen
-workspace 2 output DP-4
+workspace 2 output DP-7
 # Right screen
-workspace 3 output DP-7
+workspace 3 output DP-4
 
 output DP-7 {
     res 1920x1080
@@ -87,8 +87,18 @@ output eDP-1 {
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 input type:keyboard {
-    xkb_layout us,pl
+    xkb_layout pl
     xkb_options ctrl:nocaps
+}
+
+# Update configuration for mice
+input type:mouse {
+    natural_scroll enabled
+}
+
+# Update configuration for touchpad
+input type:touchpad {
+    natural_scroll enabled
 }
 
 ### Key bindings
