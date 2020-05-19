@@ -7,3 +7,33 @@
 [submodule ".config/nvim/pack/jakzale/start/vim-scriptease"]
 	path = .config/nvim/pack/jakzale/start/scriptease
 	url = https://github.com/tpope/vim-scriptease.git
+[submodule ".config/nvim/pack/jakzale/opt/matchit"]
+	path = .config/nvim/pack/jakzale/opt/matchit
+	url = https://github.com/chrisbra/matchit.git
+[submodule ".config/nvim/pack/jakzale/start/sensible"]
+	path = .config/nvim/pack/jakzale/start/sensible
+	url = https://github.com/tpope/vim-sensible.git
+[submodule ".config/nvim/pack/jakzale/start/fugitive"]
+	path = .config/nvim/pack/jakzale/start/fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule ".config/nvim/pack/jakzale/start/markdown"]
+	path = .config/nvim/pack/jakzale/start/markdown
+	url = https://github.com/tpope/vim-markdown.git
+[submodule ".config/nvim/pack/jakzale/start/projectionist"]
+	path = .config/nvim/pack/jakzale/start/projectionist
+	url = https://github.com/tpope/vim-projectionist.git
+[submodule ".config/nvim/pack/jakzale/start/dispatch"]
+	path = .config/nvim/pack/jakzale/start/dispatch
+	url = https://github.com/tpope/vim-dispatch.git
+[submodule ".config/nvim/pack/jakzale/start/surround"]
+	path = .config/nvim/pack/jakzale/start/surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule ".config/nvim/pack/jakzale/start/repeat"]
+	path = .config/nvim/pack/jakzale/start/repeat
+	url = https://github.com/tpope/vim-repeat
+[submodule ".config/nvim/pack/jakzale/start/speeddating"]
+	path = .config/nvim/pack/jakzale/start/speeddating
+	url = https://github.com/tpope/vim-speeddating.git
+[submodule ".config/nvim/pack/jakzale/start/obsession"]
+	path = .config/nvim/pack/jakzale/start/obsession
+	url = https://github.com/tpope/vim-obsession.git

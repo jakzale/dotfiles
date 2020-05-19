@@ -29,10 +29,6 @@ if dein#load_state('/home/jakub/.cache/dein')
   call dein#add('ntpeters/vim-better-whitespace')
   call dein#add('simnalamburt/vim-mundo')
   call dein#add('tomtom/tcomment_vim')
-  call dein#add('tpope/vim-fugitive')
-  call dein#add('tpope/vim-markdown')
-  call dein#add('tpope/vim-repeat')
-  call dein#add('tpope/vim-surround')
   call dein#add('vim-airline/vim-airline')
   call dein#add('vim-airline/vim-airline-themes')
 
@@ -40,6 +36,7 @@ if dein#load_state('/home/jakub/.cache/dein')
   call dein#end()
   call dein#save_state()
 endif
+
 
 " Required:
 filetype plugin indent on
