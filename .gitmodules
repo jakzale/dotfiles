@@ -37,3 +37,6 @@
 [submodule ".config/nvim/pack/jakzale/start/obsession"]
 	path = .config/nvim/pack/jakzale/start/obsession
 	url = https://github.com/tpope/vim-obsession.git
+[submodule ".config/nvim/pack/jakzale/start/eunuch"]
+	path = .config/nvim/pack/jakzale/start/eunuch
+	url = https://github.com/tpope/vim-eunuch.git
