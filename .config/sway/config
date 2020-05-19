@@ -26,7 +26,7 @@ set $menu dmenu_path | wofi --allow-images --insensitive --show=drun | xargs swa
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 
 # Left screen
-workspace 1 output DP-8
+workspace 1 output DP-7
 # Built in screen (usually at the bottom)
 workspace 2 output eDP-1
 # Right screen
