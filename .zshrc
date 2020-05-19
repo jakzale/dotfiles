@@ -108,14 +108,22 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # include cargo if it exists
 if [ -d "$HOME/.cargo/bin" ] ; then
-    PATH="$HOME/.cargo/bin:$PATH"
+    export PATH="$HOME/.cargo/bin:$PATH"
 fi
 
 # include go if it exists
 if [ -d "$HOME/.local/go" ] ; then
-   PATH="$HOME/.local/go/bin:$PATH"
-   GOPATH="$HOME/Developer/go"
+   export PATH="$HOME/.local/go/bin:$PATH"
+   export GOPATH="$HOME/Developer/go"
 fi
+
+# try setting SSH_AUTH_SOCK if unset
+
+if [ -z "$SSH_AUTH_SOCK" ] ; then
+    eval $(gnome-keyring-daemon --start)
+    export SSH_AUTH_SOCK
+fi
+
 
 export EDITOR='nvim'
 
@@ -163,3 +171,8 @@ function ui-unscaled () {
     ui-alacritty-unscaled
     ui-sway-unscaled
 }
+
+alias hnterm="TERM=xterm-256color hnterm"
+
+alias sway-outputs="swaymsg -t get_outputs"
+
