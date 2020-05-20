@@ -16,9 +16,6 @@
 [submodule ".config/nvim/pack/jakzale/start/fugitive"]
 	path = .config/nvim/pack/jakzale/start/fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule ".config/nvim/pack/jakzale/start/markdown"]
-	path = .config/nvim/pack/jakzale/start/markdown
-	url = https://github.com/tpope/vim-markdown.git
 [submodule ".config/nvim/pack/jakzale/start/projectionist"]
 	path = .config/nvim/pack/jakzale/start/projectionist
 	url = https://github.com/tpope/vim-projectionist.git
@@ -61,9 +58,6 @@
 [submodule ".config/nvim/pack/jakzale/start/lsp"]
 	path = .config/nvim/pack/jakzale/opt/lsp
 	url = https://github.com/neovim/nvim-lsp
-[submodule ".config/nvim/pack/jakzale/start/haskell"]
-	path = .config/nvim/pack/jakzale/start/haskell
-	url = https://github.com/neovimhaskell/haskell-vim
 [submodule ".config/nvim/pack/jakzale/start/better-whitespace"]
 	path = .config/nvim/pack/jakzale/start/better-whitespace
 	url = https://github.com/ntpeters/vim-better-whitespace
@@ -76,3 +70,6 @@
 [submodule ".config/nvim/pack/jakzale/start/lightline"]
 	path = .config/nvim/pack/jakzale/start/lightline
 	url = https://github.com/itchyny/lightline.vim
+[submodule ".config/nvim/pack/jakzale/start/polyglot"]
+	path = .config/nvim/pack/jakzale/start/polyglot
+	url = https://github.com/sheerun/vim-polyglot
