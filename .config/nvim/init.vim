@@ -145,3 +145,7 @@ let g:deoplete#enable_at_startup = 1
 
 " Markdown
 let g:markdown_folding = 1
+
+" Spelling
+set spelllang=en_gb,pl
+set spell
