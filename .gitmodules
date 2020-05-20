@@ -40,3 +40,42 @@
 [submodule ".config/nvim/pack/jakzale/start/eunuch"]
 	path = .config/nvim/pack/jakzale/start/eunuch
 	url = https://github.com/tpope/vim-eunuch.git
+[submodule ".config/nvim/pack/jakzale/start/deoplete"]
+	path = .config/nvim/pack/jakzale/start/deoplete
+	url = https://github.com/Shougo/deoplete.nvim.git
+[submodule ".config/nvim/pack/jakzale/start/gitgutter"]
+	path = .config/nvim/pack/jakzale/start/gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+[submodule ".config/nvim/pack/jakzale/start/LanguageClient"]
+	path = .config/nvim/pack/jakzale/start/LanguageClient
+	url = https://github.com/autozimu/LanguageClient-neovim.git
+[submodule ".config/nvim/pack/jakzale/start/numbertoggle"]
+	path = .config/nvim/pack/jakzale/start/numbertoggle
+	url = https://github.com/jeffkreeftmeijer/vim-numbertoggle
+[submodule ".config/nvim/pack/jakzale/start/onedark"]
+	path = .config/nvim/pack/jakzale/opt/onedark
+	url = https://github.com/joshdick/onedark.vim
+[submodule ".config/nvim/pack/jakzale/start/fzf"]
+	path = .config/nvim/pack/jakzale/start/fzf
+	url = https://github.com/junegunn/fzf.vim
+[submodule ".config/nvim/pack/jakzale/start/lsp"]
+	path = .config/nvim/pack/jakzale/opt/lsp
+	url = https://github.com/neovim/nvim-lsp
+[submodule ".config/nvim/pack/jakzale/start/haskell"]
+	path = .config/nvim/pack/jakzale/start/haskell
+	url = https://github.com/neovimhaskell/haskell-vim
+[submodule ".config/nvim/pack/jakzale/start/better-whitespace"]
+	path = .config/nvim/pack/jakzale/start/better-whitespace
+	url = https://github.com/ntpeters/vim-better-whitespace
+[submodule ".config/nvim/pack/jakzale/start/mundo"]
+	path = .config/nvim/pack/jakzale/start/mundo
+	url = https://github.com/simnalamburt/vim-mundo
+[submodule ".config/nvim/pack/jakzale/start/tcomment"]
+	path = .config/nvim/pack/jakzale/start/tcomment
+	url = https://github.com/tomtom/tcomment_vim
+[submodule ".config/nvim/pack/jakzale/start/airline"]
+	path = .config/nvim/pack/jakzale/start/airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule ".config/nvim/pack/jakzale/start/airline-themes"]
+	path = .config/nvim/pack/jakzale/start/airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
