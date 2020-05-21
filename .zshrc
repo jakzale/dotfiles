@@ -2,13 +2,36 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Prepend $HOME/.local/bin to $PATH
-if [[ "$PATH" != *"$HOME/.local/bin"* ]] ; then
-    PATH="$HOME/.local/bin:$PATH"
+function pathify () {
+    local entry="$1"
+    local current=("${(@s/:/)PATH}")
+
+    if [[ ${current[(ie)${entry}]} -gt ${#current} ]]; then
+        export PATH="$entry:$PATH"
+    fi
+}
+
+# Setting up $PATH and other variables
+
+pathify "/snap/bin"
+# include cargo if it exists
+if [ -d "$HOME/.cargo/bin" ] ; then
+    pathify "$HOME/.cargo/bin"
 fi
+
+# include go if it exists
+if [ -d "$HOME/.local/go" ] ; then
+    pathify "$HOME/.local/go/bin"
+    export GOPATH="$HOME/Developer/go"
+fi
+
+pathify  "$HOME/.local/bin"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/jakub/.oh-my-zsh"
+
+# EDITOR
+export EDITOR='nvim'
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -106,16 +129,6 @@ source $ZSH/oh-my-zsh.sh
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
-# include cargo if it exists
-if [ -d "$HOME/.cargo/bin" ] ; then
-    export PATH="$HOME/.cargo/bin:$PATH"
-fi
-
-# include go if it exists
-if [ -d "$HOME/.local/go" ] ; then
-   export PATH="$HOME/.local/go/bin:$PATH"
-   export GOPATH="$HOME/Developer/go"
-fi
 
 # try setting SSH_AUTH_SOCK if unset
 
@@ -123,9 +136,6 @@ if [ -z "$SSH_AUTH_SOCK" ] ; then
     eval $(gnome-keyring-daemon --start)
     export SSH_AUTH_SOCK
 fi
-
-
-export EDITOR='nvim'
 
 # Setup gh completion
 eval $(gh completion --shell zsh)
@@ -136,8 +146,9 @@ alias gpg-unlock='echo "" | gpg -s > /dev/null'
 
 alias nec='nvim +Files\ ~/.config'
 
-# NeoVim server config
-export NVIM_LISTEN_ADDRESS="${XDG_RUNTIME_DIR}/nvimsocket"
+# Use shell pid for nvim address
+# TODO Not sure how useful this will be
+export NVIM_LISTEN_ADDRESS="${NVIM_LISTEN_ADDRESS:-${XDG_RUNTIME_DIR}/nvim/${$}-socket}"
 
 function ui-alacritty-scaled () {
     local config_dir="${XDG_CONFIG_HOME:-$HOME/.config}"
