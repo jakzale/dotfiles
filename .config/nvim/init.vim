@@ -1,5 +1,5 @@
-filetype plugin indent on
-syntax enable
+" filetype plugin indent on
+" syntax enable
 let g:python3_host_prog='/usr/bin/python3'
 
 set undofile
@@ -18,11 +18,17 @@ set spelllang=en_gb
 " TODO:  Consider making this lazily enabled on first file
 set spell
 
+" colorscheme
 packadd! onedark
 colorscheme onedark
 let g:lightline = {
   \ 'colorscheme': 'onedark',
   \ }
+
+" whitespace colors
+let s:colors = onedark#GetColors()
+let g:better_whitespace_ctermcolor = s:colors.red.cterm
+let g:better_whitespace_guicolor   = s:colors.red.gui
 
 " Remap jk to esc
 inoremap jk <esc>
@@ -32,6 +38,8 @@ let mapleader = "\<space>"
 nnoremap <leader>vs <cmd>source %<cr>
 vnoremap <leader>vs y:@"<cr>
 
+nnoremap <leader>/ <cmd>nohlsearch<cr>
+
 nnoremap <leader>ut <cmd>MundoToggle<cr>
 
 " FZF
@@ -40,9 +48,14 @@ nnoremap <leader>pf <cmd>Files<cr>
 nnoremap <leader>pb <cmd>Buffers<cr>
 nnoremap <leader>ps <cmd>Rg<cr>
 
+" Fugitive
+nnoremap <leader>gs <cmd>Gstatus<cr>
+
+" Project sidebar
 let g:netrw_list_hide=netrw_gitignore#Hide().'^.git/$'
 nnoremap <leader>le <cmd>20Lex<cr>
 
+" LSP
 let g:LanguageClient_serverCommands = {
     \ 'rust'    : ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
     \ 'haskell' : ['~/.local/bin/hie-wrapper', '--lsp'],
@@ -65,8 +78,10 @@ augroup LSP
     autocmd FileType * call s:LC_maps()
 augroup END
 
+" Deoplete
 let g:deoplete#enable_at_startup = 1
 
+" Markdown
 let g:markdown_folding = 1
 let g:markdown_fenced_languages = ['vim', 'bash=sh']
 
