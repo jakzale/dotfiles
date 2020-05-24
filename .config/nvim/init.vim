@@ -14,9 +14,8 @@ set noshowmode
 set number relativenumber
 " prefer british spelling
 set spelllang=en_gb
-" Enabling spellchecking takes 30ms
-" TODO:  Consider making this lazily enabled on first file
-set spell
+" Disable spelling by default
+set nospell
 
 " colorscheme
 packadd! onedark
