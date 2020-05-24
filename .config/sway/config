@@ -262,8 +262,6 @@ bar {
     swaybar_command waybar
 }
 
-default_border pixel 2
-
 # Start the notification daemon
 exec mako
 
