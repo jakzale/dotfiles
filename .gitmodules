@@ -1,5 +1,5 @@
 [submodule ".emacs.d"]
-	path = .emacs.d
+	path = emacs/.emacs.d
 	url = git@github.com:hlissner/doom-emacs.git
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
