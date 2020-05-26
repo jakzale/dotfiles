@@ -56,8 +56,8 @@ nnoremap <leader>le <cmd>20Lex<cr>
 
 " LSP
 let g:LanguageClient_serverCommands = {
-    \ 'rust'    : ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
-    \ 'haskell' : ['~/.local/bin/hie-wrapper', '--lsp'],
+    \ 'rust'    : ['rustup', 'run', 'stable', 'rls'],
+    \ 'haskell' : ['hie-wrapper', '--lsp'],
     \ }
 
 let g:LanguageClient_rootMarkers = {
