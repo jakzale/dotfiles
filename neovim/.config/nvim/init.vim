@@ -42,7 +42,7 @@ nnoremap <leader>/ <cmd>nohlsearch<cr>
 nnoremap <leader>ut <cmd>MundoToggle<cr>
 
 " FZF
-source /usr/share/doc/fzf/examples/fzf.vim
+" source /usr/share/doc/fzf/examples/fzf.vim
 nnoremap <leader>pf <cmd>Files<cr>
 nnoremap <leader>pb <cmd>Buffers<cr>
 nnoremap <leader>ps <cmd>Rg<cr>
