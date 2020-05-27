@@ -30,8 +30,10 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-;; TODO:  Fix this one to use keybase
-(setq org-directory "~/org/")
+(setq org-directory
+      (concat
+       (file-name-as-directory (getenv "XDG_RUNTIME_DIR"))
+      "keybase/kbfs/private/jakzale/org"))
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
