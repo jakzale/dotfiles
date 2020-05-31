@@ -1,6 +1,7 @@
 [submodule ".emacs.d"]
 	path = emacs/.emacs.d
 	url = git@github.com:hlissner/doom-emacs.git
+	branch = develop
 [submodule ".oh-my-zsh"]
 	path = zsh/.oh-my-zsh
 	url = git@github.com:ohmyzsh/ohmyzsh.git
@@ -46,10 +47,11 @@
 [submodule ".config/nvim/pack/jakzale/start/LanguageClient"]
 	path = neovim/.config/nvim/pack/jakzale/start/LanguageClient
 	url = https://github.com/autozimu/LanguageClient-neovim.git
+	branch = next
 [submodule ".config/nvim/pack/jakzale/start/numbertoggle"]
 	path = neovim/.config/nvim/pack/jakzale/start/numbertoggle
 	url = https://github.com/jeffkreeftmeijer/vim-numbertoggle
-    ignore = untracked
+	ignore = untracked
 [submodule ".config/nvim/pack/jakzale/start/onedark"]
 	path = neovim/.config/nvim/pack/jakzale/opt/onedark
 	url = https://github.com/joshdick/onedark.vim
