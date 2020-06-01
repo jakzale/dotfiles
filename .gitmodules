@@ -76,3 +76,6 @@
 [submodule ".config/nvim/pack/jakzale/start/polyglot"]
 	path = neovim/.config/nvim/pack/jakzale/start/polyglot
 	url = https://github.com/sheerun/vim-polyglot
+[submodule "fish/.local/share/omf"]
+	path = fish/.local/share/omf
+	url = https://github.com/oh-my-fish/oh-my-fish.git
