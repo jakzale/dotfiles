@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -ueo pipefail
+set -x
+
+# A simple wrapper to open google chrome with a certain profile
+GOOGLE_CHROME=$(which google-chrome-stable)
+CHROME_PROFILE=Jakub
+CHROME_PROFILE_DIR=$(rg -e '"name":"'"${CHROME_PROFILE}"'"' -g '*Preferences' -l ~/.config/google-chrome/ -0 | xargs -0 dirname | xargs -0 basename)
+exec $GOOGLE_CHROME --profile-directory="${CHROME_PROFILE_DIR}" "$@"
