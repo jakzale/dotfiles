@@ -56,3 +56,16 @@
 ;;
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
+;; Define safe local variables for haskell-mode
+(put 'haskell-process-args-stack-ghci 'safe-local-variable #'listp)
+(put 'dante-target  'safe-local-variable #'stringp)
+;; (put 'dante-methods 'safe-local-variable #'listp)
+
+;; Configure Haskell mode
+;; TODO:  Enable stylish haskell later
+(setq haskell-stylish-on-save 'nil
+      haskell-indentation-layout-offset 4
+      haskell-indentation-left-offset 4
+      haskell-indentation-starter-offset 4
+      haskell-indentation-where-post-offset 4
+      haskell-indentation-where-pre-offset 4)
