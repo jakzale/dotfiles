@@ -1,0 +1,68 @@
+[
+    {
+        "enabled": true,
+        "id": "70194f00038c66f03842a67ef10547d7",
+        "metadata": {
+            "fullname": "xrandr-unknown",
+            "name": "eDP1"
+        },
+        "mode": {
+            "refresh": 59.99771499633789,
+            "size": {
+                "height": 1440,
+                "width": 2560
+            }
+        },
+        "pos": {
+            "x": 640,
+            "y": 1080
+        },
+        "primary": true,
+        "rotation": 1,
+        "scale": 1
+    },
+    {
+        "enabled": true,
+        "id": "8002cb03491a395ec15dbf8907e2571c",
+        "metadata": {
+            "fullname": "xrandr-DELL U2417H-5K9YD87ICYZL",
+            "name": "DP1-2-8"
+        },
+        "mode": {
+            "refresh": 60,
+            "size": {
+                "height": 1080,
+                "width": 1920
+            }
+        },
+        "pos": {
+            "x": 1920,
+            "y": 0
+        },
+        "primary": false,
+        "rotation": 1,
+        "scale": 1
+    },
+    {
+        "enabled": true,
+        "id": "1e770d9f76bee51550a514da12d960b8",
+        "metadata": {
+            "fullname": "xrandr-DELL U2417H-5K9YD87ID07L",
+            "name": "DP1-3"
+        },
+        "mode": {
+            "refresh": 60,
+            "size": {
+                "height": 1080,
+                "width": 1920
+            }
+        },
+        "pos": {
+            "x": 0,
+            "y": 0
+        },
+        "primary": false,
+        "rotation": 1,
+        "scale": 1
+    }
+]

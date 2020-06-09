@@ -1,0 +1,16 @@
+{
+    "id": "1e770d9f76bee51550a514da12d960b8",
+    "metadata": {
+        "fullname": "xrandr-DELL U2417H-5K9YD87ID07L",
+        "name": "DP1-3"
+    },
+    "mode": {
+        "refresh": 60,
+        "size": {
+            "height": 1080,
+            "width": 1920
+        }
+    },
+    "rotation": 1,
+    "scale": 1
+}
