@@ -7,5 +7,5 @@ Maybe later I will experiment with chezmoi
 ## Updating submodules
 
 ```bash
-git pull --recurse-submodules --ff-only
+git submodule update --recursive --remote --jobs 8 --ff-only
 ```
