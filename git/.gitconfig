@@ -11,6 +11,7 @@
 # Use neovim
 [core]
 	editor = nvim
+    excludesfile = ~/.gitignoreglobal
 
 # Private projects
 [includeIf "gitdir:~/Developer/"]
