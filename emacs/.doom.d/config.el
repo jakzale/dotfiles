@@ -69,3 +69,6 @@
       haskell-indentation-starter-offset 4
       haskell-indentation-where-post-offset 4
       haskell-indentation-where-pre-offset 4)
+
+;; Make compilation go vertically to the right
+(set-popup-rule! "^\\*compilation" :side 'right :size 80)
