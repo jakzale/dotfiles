@@ -48,7 +48,7 @@ nnoremap <leader>pb <cmd>Buffers<cr>
 nnoremap <leader>ps <cmd>Rg<cr>
 
 " Fugitive
-nnoremap <leader>gs <cmd>Gstatus<cr>
+nnoremap <leader>gg <cmd>Gstatus<cr>
 
 " Project sidebar
 let g:netrw_list_hide=netrw_gitignore#Hide().'^.git/$'
