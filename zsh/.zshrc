@@ -1,4 +1,3 @@
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -13,7 +12,6 @@ function pathify () {
 
 # Setting up $PATH and other variables
 
-pathify "/snap/bin"
 # include cargo if it exists
 if [ -d "$HOME/.cargo/bin" ] ; then
     pathify "$HOME/.cargo/bin"
@@ -25,7 +23,11 @@ if [ -d "$HOME/.local/go" ] ; then
     export GOPATH="$HOME/Developer/go"
 fi
 
-pathify  "$HOME/.local/bin"
+# Add .local bin
+pathify "$HOME/.local/bin"
+
+# Add dotnet tools
+pathify "$HOME/.dotnet/tools"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/jakub/.oh-my-zsh"
@@ -97,7 +99,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git stack cargo ubuntu taskwarrior)
+plugins=(git stack nvm kubectl minikube helm z)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -127,63 +129,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
-
-# try setting SSH_AUTH_SOCK if unset
-
-if [ -z "$SSH_AUTH_SOCK" ] ; then
-    eval $(gnome-keyring-daemon --start)
-    export SSH_AUTH_SOCK
-fi
-
-# Setup gh completion
-eval $(gh completion --shell zsh)
-
-# Quick hack to unlock default key for gpg
-export GPG_TTY=$(tty)
-alias gpg-unlock='echo "" | gpg -s > /dev/null'
-
-alias nec='nvim +Files\ ~/.config'
-
-# Use shell pid for nvim address
-# TODO Not sure how useful this will be
-export NVIM_LISTEN_ADDRESS="${NVIM_LISTEN_ADDRESS:-${XDG_RUNTIME_DIR}/nvim/${$}-socket}"
-
-function ui-alacritty-scaled () {
-    local config_dir="${XDG_CONFIG_HOME:-$HOME/.config}"
-    local alacritty_config="${config_dir}/alacritty/alacritty.yml"
-    sed --in-place 's/size: 16.0/size: 12.0/' "${alacritty_config}"
-}
-
-function ui-alacritty-unscaled () {
-    local config_dir="${XDG_CONFIG_HOME:-$HOME/.config}"
-    local alacritty_config="${config_dir}/alacritty/alacritty.yml"
-    sed --in-place 's/size: 12.0/size: 16.0/' "${alacritty_config}"
-}
-
-# Scale the UI up
-function ui-sway-scaled () {
-    # Turn on scaling
-    swaymsg -- output eDP-1 scale 2
-}
-
-function ui-sway-unscaled () {
-    # Turn off scaling
-    swaymsg -- output eDP-1 scale 1
-}
-
-function ui-scaled () {
-    ui-alacritty-scaled
-    ui-sway-scaled
-}
-
-function ui-unscaled () {
-    ui-alacritty-unscaled
-    ui-sway-unscaled
-}
-
-alias hnterm="TERM=xterm-256color hnterm"
-
-alias sway-outputs="swaymsg -t get_outputs"
+# Export kubernetes config
+export KUBECONFIG="$HOME/.config/kube/pozitive-kubeconfig.yaml:$HOME/.kube/config"
 
