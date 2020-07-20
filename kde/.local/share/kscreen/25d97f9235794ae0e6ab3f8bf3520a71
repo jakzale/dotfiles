@@ -1,0 +1,46 @@
+[
+    {
+        "enabled": true,
+        "id": "70194f00038c66f03842a67ef10547d7",
+        "metadata": {
+            "fullname": "xrandr-unknown",
+            "name": "eDP1"
+        },
+        "mode": {
+            "refresh": 59.99771499633789,
+            "size": {
+                "height": 1440,
+                "width": 2560
+            }
+        },
+        "pos": {
+            "x": 0,
+            "y": 1080
+        },
+        "primary": true,
+        "rotation": 1,
+        "scale": 1
+    },
+    {
+        "enabled": true,
+        "id": "3eb8d0f0b38126d26ea0d101c24491ae",
+        "metadata": {
+            "fullname": "xrandr-27GL650F-003NTMX1Y755",
+            "name": "HDMI1"
+        },
+        "mode": {
+            "refresh": 120,
+            "size": {
+                "height": 1080,
+                "width": 1920
+            }
+        },
+        "pos": {
+            "x": 320,
+            "y": 0
+        },
+        "primary": false,
+        "rotation": 1,
+        "scale": 1
+    }
+]
