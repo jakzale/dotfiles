@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
-let g:netrw_dirhist_6='/home/jakub/Pozitive/dicom-uploader/src/server/routes/v1'
-let g:netrw_dirhist_5='/home/jakub/Pozitive/dicom-uploader/src/server/routes'
-let g:netrw_dirhist_4='/home/jakub/Pozitive/dicom-uploader/kubernetes'
-let g:netrw_dirhist_3='/home/jakub/Pozitive/oxenfurt'
-let g:netrw_dirhist_2='/home/jakub/Pozitive/dicom-uploader/kubernetes/pvc-dicom-node_modules.yaml'
-let g:netrw_dirhist_1='/home/jakub/Pozitive/dicom-uploader/kubernetes'
