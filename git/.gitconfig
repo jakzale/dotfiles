@@ -25,3 +25,5 @@
 [includeIf "gitdir:~/IOHK/"]
 	path = ~/IOHK/.gitconfig
 
+[pull]
+	rebase = true
