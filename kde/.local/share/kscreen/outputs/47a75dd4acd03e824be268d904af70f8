@@ -1,0 +1,16 @@
+{
+    "id": "47a75dd4acd03e824be268d904af70f8",
+    "metadata": {
+        "fullname": "xrandr-27GL650F-003NTMX1Y755",
+        "name": "HDMI1"
+    },
+    "mode": {
+        "refresh": 120,
+        "size": {
+            "height": 1080,
+            "width": 1920
+        }
+    },
+    "rotation": 1,
+    "scale": 1
+}
