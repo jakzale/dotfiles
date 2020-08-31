@@ -25,7 +25,7 @@
         "enabled": true,
         "id": "8002cb03491a395ec15dbf8907e2571c",
         "metadata": {
-            "fullname": "xrandr-DELL U2417H-5K9YD87ICYZL",
+            "fullname": "xrandr-Dell Inc.-DELL U2417H-5K9YD87ICYZL",
             "name": "DP1-2-8"
         },
         "mode": {
@@ -47,7 +47,7 @@
         "enabled": true,
         "id": "1e770d9f76bee51550a514da12d960b8",
         "metadata": {
-            "fullname": "xrandr-DELL U2417H-5K9YD87ID07L",
+            "fullname": "xrandr-Dell Inc.-DELL U2417H-5K9YD87ID07L",
             "name": "DP1-3"
         },
         "mode": {
