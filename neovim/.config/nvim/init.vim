@@ -31,11 +31,16 @@ let g:better_whitespace_guicolor   = s:colors.red.gui
 
 " Remap jk to esc
 inoremap jk <esc>
+
+" Remap jk to esc in term mode
+tnoremap jk <c-\><c-n>
+
 nnoremap <space> <nop>
 let mapleader = "\<space>"
 
 nnoremap <leader>vs <cmd>source %<cr>
 vnoremap <leader>vs y:@"<cr>
+
 
 nnoremap <leader>/ <cmd>nohlsearch<cr>
 
@@ -64,11 +69,24 @@ let g:LanguageClient_rootMarkers = {
     \ 'haskell' : ['stack.yaml', '*.cabal'],
     \ }
 
+" Force fzf ui
+let g:LanguageClient_selectionUI = "fzf"
+
 function! s:LC_maps()
     if has_key(g:LanguageClient_serverCommands, &filetype)
-        nnoremap <buffer> <silent> K  <cmd>call LanguageClient#textDocument_hover()<cr>
-        nnoremap <buffer> <silent> gd <cmd>call LanguageClient#textDocument_definition()<cr>
+        nnoremap <buffer> <silent> K           <cmd>call LanguageClient#textDocument_hover()<cr>
+        nnoremap <buffer> <silent> gd          <cmd>call LanguageClient#textDocument_definition()<cr>
         nnoremap <buffer> <silent> <leader>lr <cmd>call LanguageClient#textDocument_rename()<cr>
+
+        " nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+        nnoremap <buffer> <silent> <leader>lm :call LanguageClient_contextMenu()<cr>
+        nnoremap <buffer> <silent> <leader>lk :call LanguageClient#textDocument_hover()<cr>
+        nnoremap <buffer> <silent> <leader>lg :call LanguageClient#textDocument_definition()<cr>
+        nnoremap <buffer> <silent> <leader>lr :call LanguageClient#textDocument_rename()<cr>
+        nnoremap <buffer> <silent> <leader>lf :call LanguageClient#textDocument_formatting()<cr>
+        nnoremap <buffer> <silent> <leader>lb :call LanguageClient#textDocument_references()<cr>
+        nnoremap <buffer> <silent> <leader>la :call LanguageClient#textDocument_codeAction()<cr>
+        nnoremap <buffer> <silent> <leader>ls :call LanguageClient#textDocument_documentSymbol()<cr>
     endif
 endfunction
 
