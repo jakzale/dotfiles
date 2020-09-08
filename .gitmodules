@@ -82,3 +82,6 @@
 [submodule "neovim/.config/nvim/pack/jakzale/start/neoterm"]
 	path = neovim/.config/nvim/pack/jakzale/start/neoterm
 	url = git@github.com:kassio/neoterm.git
+[submodule "neovim/.config/nvim/pack/jakzale/start/orgmode"]
+	path = neovim/.config/nvim/pack/jakzale/start/orgmode
+	url = git@github.com:jceb/vim-orgmode.git
