@@ -140,14 +140,5 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
-    },
-    "custom/taskwarrior" : {
-        "format": "taskwarrior {}",
-        "exec": "task _get rc.context",
-        "interval": 1
-        // "exec": "task _get rc.context",
-        // "exec-if": "true",
-        // "interval": 1,
-        // "tooltip": false
     }
 }
