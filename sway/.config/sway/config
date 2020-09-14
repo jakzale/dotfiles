@@ -53,10 +53,6 @@ output DP-4 {
     pos 1920 0
 }
 
-output HDMI-A-1 {
-    mode 1920x1080@120Hz
-    pos 1440 0
-}
 
 # Built in screen (usually at the bottom)
 workspace 2 output eDP-1
@@ -64,6 +60,14 @@ workspace 2 output eDP-1
 output eDP-1 {
     res 2560x1440
     pos 1440 1080
+}
+
+# Top screen for top configuration
+workspace 1 output HDMI-A-1
+
+output HDMI-A-1 {
+    mode 1920x1080@120Hz
+    pos 1440 0
 }
 
 #
