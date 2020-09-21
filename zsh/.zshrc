@@ -132,3 +132,6 @@ source $ZSH/oh-my-zsh.sh
 # Export kubernetes config
 export KUBECONFIG="$HOME/.config/kube/pozitive-kubeconfig.yaml:$HOME/.kube/config"
 
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/mcli mcli
