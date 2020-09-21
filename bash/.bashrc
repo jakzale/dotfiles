@@ -148,3 +148,5 @@ eval $(minikube completion bash)
 eval $(helm completion bash)
 
 export PATH="$PATH:$HOME/.dotnet/tools"
+
+complete -C /usr/bin/mcli mcli
