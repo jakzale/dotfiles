@@ -43,7 +43,9 @@
        (file-name-as-directory org-directory)
        +org-capture-todo-file))
 
-(setq org-capture-templates
+;; NOTE:  Org mode specifies org-caputre-templates by default, therefore we need
+;; to set them in the after! macro
+(setq jakzale/org-capture-templates
       '(("t" "Todo" entry
          (file+headline +org-capture-todo-file "Inbox")
          "* TODO %?\n%i\n%a" :prepend t)
@@ -67,8 +69,10 @@
         ;; ("ot" "Project todo" entry #'+org-capture-central-project-todo-file "* TODO %?\n %i\n %a" :heading "Tasks" :prepend nil)
         ;; ("on" "Project notes" entry #'+org-capture-central-project-notes-file "* %U %?\n %i\n %a" :heading "Notes" :prepend t)
         ;; ("oc" "Project changelog" entry #'+org-capture-central-project-changelog-file "* %U %?\n %i\n %a" :heading "Changelog" :prepend t)
-        )
-      )
+        ))
+
+(after! org
+  (setq org-capture-templates jakzale/org-capture-templates))
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
