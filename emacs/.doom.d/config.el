@@ -35,6 +35,41 @@
        (file-name-as-directory (getenv "XDG_RUNTIME_DIR"))
       "keybase/kbfs/private/jakzale/org"))
 
+;; Using a single file for gtd
+(setq +org-capture-todo-file "gtd.org")
+
+(setq jakzale/gtd-file
+      (concat
+       (file-name-as-directory org-directory)
+       +org-capture-todo-file))
+
+(setq org-capture-templates
+      '(("t" "Todo" entry
+         (file+headline +org-capture-todo-file "Inbox")
+         "* TODO %?\n%i\n%a" :prepend t)
+        ;; ("n" "Personal notes" entry
+        ;;  (file+headline +org-capture-notes-file "Inbox")
+        ;;  "* %u %?\n%i\n%a" :prepend t)
+        ;; ("j" "Journal" entry
+        ;;  (file+olp+datetree +org-capture-journal-file)
+        ;;  "* %U %?\n%i\n%a" :prepend t)
+        ;; ("p" "Templates for projects")
+        ;; ("pt" "Project-local todo" entry
+        ;;  (file+headline +org-capture-project-todo-file "Inbox")
+        ;;  "* TODO %?\n%i\n%a" :prepend t)
+        ;; ("pn" "Project-local notes" entry
+        ;;  (file+headline +org-capture-project-notes-file "Inbox")
+        ;;  "* %U %?\n%i\n%a" :prepend t)
+        ;; ("pc" "Project-local changelog" entry
+        ;;  (file+headline +org-capture-project-changelog-file "Unreleased")
+        ;;  "* %U %?\n%i\n%a" :prepend t)
+        ;; ("o" "Centralized templates for projects")
+        ;; ("ot" "Project todo" entry #'+org-capture-central-project-todo-file "* TODO %?\n %i\n %a" :heading "Tasks" :prepend nil)
+        ;; ("on" "Project notes" entry #'+org-capture-central-project-notes-file "* %U %?\n %i\n %a" :heading "Notes" :prepend t)
+        ;; ("oc" "Project changelog" entry #'+org-capture-central-project-changelog-file "* %U %?\n %i\n %a" :heading "Changelog" :prepend t)
+        )
+      )
+
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
@@ -72,3 +107,10 @@
 
 ;; Make compilation go vertically to the right
 (set-popup-rule! "^\\*compilation" :side 'right :size 80)
+
+;; Custom key bindings:
+;; - <leader> n g :: open gtd file
+(map! :leader
+      ;;; <leader> n --- notes
+      (:prefix-map ("n" . "notes")
+       :desc "Open GTD file" "g" (cmd! (find-file jakzale/gtd-file))))
