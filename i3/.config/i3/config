@@ -180,3 +180,5 @@ bar {
 exec --no-startup-id xrandr --output eDP1 --auto --output HDMI1 --auto --above eDP1
 # Remap capslock to ctrl
 exec --no-startup-id setxkbmap -option "ctrl:nocaps"
+# Set up wallpaper
+exec --no-startup-id feh --bg-scale /usr/share/backgrounds/i3_default_background.jpg
