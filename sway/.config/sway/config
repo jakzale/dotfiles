@@ -272,4 +272,7 @@ bar {
 # Start the notification daemon
 exec mako
 
+# Start the wifi service
+exec nm-applet
+
 include /etc/sway/config.d/*
