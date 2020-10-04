@@ -275,4 +275,7 @@ exec mako
 # Start the wifi service
 exec nm-applet
 
+# Start bluetooth on login
+exec bluetoothctl -- power on
+
 include /etc/sway/config.d/*
