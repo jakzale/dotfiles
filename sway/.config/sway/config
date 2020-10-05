@@ -305,7 +305,7 @@ bar {
 exec mako
 
 # Start the wifi service
-exec nm-applet
+exec nm-applet --indicator
 
 # Start bluetooth on login
 exec bluetoothctl -- power on
