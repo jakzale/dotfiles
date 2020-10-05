@@ -310,4 +310,9 @@ exec nm-applet --indicator
 # Start bluetooth on login
 exec bluetoothctl -- power on
 
+# JetBrains specific configuration
+for_window [class="^jetbrains" title="^win0$"] floating enable
+# fix for floating welcome
+for_window [class="^jetbrains" title="^Welcome to"] floating enable
+
 include /etc/sway/config.d/*
