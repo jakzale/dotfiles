@@ -32,10 +32,11 @@ set $laptopScreen    eDP-1
 # workScreens
 set $workScreenLeft  "Dell Inc. DELL U2417H 5K9YD87ID07L"
 set $workScreenRight "Dell Inc. DELL U2417H 5K9YD87ICYZL"
+# home screen
+set $homeScreenTop   HDMI-A-1
 
 ### Screen Orientation
 # Built in screen (usually at the bottom)
-workspace 2 output $laptopScreen
 
 output $laptopScreen {
     res 2560x1440
@@ -52,13 +53,39 @@ output $workScreenRight {
     pos 1920 0
 }
 
-# Top screen for top configuration
-workspace 1 output HDMI-A-1
-
-output HDMI-A-1 {
+output $homeScreenTop {
     mode 1920x1080@120Hz
     pos 1440 0
 }
+
+### Workspace to Screen mapping
+# 1  - Left (or Top)
+# 2  - Left (or Top)
+# 3  - Left (or Top)
+# 4  - Built-in (or Bottom)
+# 5  - Built-in (or Botoom)
+# 6  - Built-in (or Botoom)
+# 7  - Built-in (or Botoom)
+# 8  - Right (or Top)
+# 9  - Right (or Top)
+# 10 - Right (or Top)
+
+workspace 1  output $workScreenLeft
+workspace 1  output $homeScreenTop
+workspace 2  output $workScreenLeft
+workspace 2  output $homeScreenTop
+workspace 3  output $workScreenLeft
+workspace 3  output $homeScreenTop
+workspace 4  output $laptopScreen
+workspace 5  output $laptopScreen
+workspace 6  output $laptopScreen
+workspace 7  output $laptopScreen
+workspace 8  output $workScreenRight
+workspace 8  output $homeScreenTop
+workspace 9  output $workScreenRight
+workspace 9  output $homeScreenTop
+workspace 10 output $workScreenRight
+workspace 10 output $homeScreenTop
 
 #
 # Example configuration:
