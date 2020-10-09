@@ -33,7 +33,7 @@ set $laptopScreen    eDP-1
 set $workScreenLeft  "Dell Inc. DELL U2417H 5K9YD87ID07L"
 set $workScreenRight "Dell Inc. DELL U2417H 5K9YD87ICYZL"
 # home screen
-set $homeScreenTop   HDMI-A-1
+set $homeScreenTop   "Goldstar Company Ltd 27GL650F 003NTMX1Y755"
 
 ### Screen Orientation
 # Built in screen (usually at the bottom)
