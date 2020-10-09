@@ -41,6 +41,7 @@ set $homeScreenTop   HDMI-A-1
 output $laptopScreen {
     res 2560x1440
     pos 1440 1080
+    scale 1
 }
 
 output $workScreenLeft {
