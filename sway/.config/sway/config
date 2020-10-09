@@ -290,6 +290,10 @@ bindsym XF86MonBrightnessUp   exec brightnessctl set +5% | grep -oE '[[:digit:]]
 # bindsym XF86AudioNext exec playerctl next
 # bindsym XF86AudioPrev exec playerctl previous
 
+### Configuration
+bindsym $mod+n       exec makoctl dismiss
+bindsym $mod+Shift+n exec makoctl dismiss -a
+
 # Progress bar
 exec mkfifo $SWAYSOCK.wob && tail -f $SWAYSOCK.wob | wob
 
