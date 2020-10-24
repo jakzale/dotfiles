@@ -319,5 +319,7 @@ exec bluetoothctl -- power on
 for_window [class="^jetbrains" title="^win0$"] floating enable
 # fix for floating welcome
 for_window [class="^jetbrains" title="^Welcome to"] floating enable
+# fix for firefox sharing indicator
+for_window [title="^Firefox - Sharing Indicator$"] floating enable
 
 include /etc/sway/config.d/*
