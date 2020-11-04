@@ -21,6 +21,8 @@
 ;; font string. You generally only need these two:
 ;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
+
+;; Default font
 (setq doom-font (font-spec :family "Cascadia Code PL" :size 16))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
@@ -30,10 +32,25 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory
-      (concat
-       (file-name-as-directory (getenv "XDG_RUNTIME_DIR"))
-      "keybase/kbfs/private/jakzale/org"))
+
+;; Machine specific configuration
+;; TODO:  Refactor each machine specific configuration into a separate file
+(let ((host (system-name)))
+  (cond
+   ((string-equal host "legion")
+    (progn
+      (setq org-directory "/keybase/private/jakzale/org")
+
+      (setq doom-font (font-spec :family "Cascadia Code PL" :size 14))))
+   ((string-equal host "carbon")
+    (progn
+      (setq org-directory
+            (concat
+             (file-name-as-directory (getenv "XDG_RUNTIME_DIR"))
+             "keybase/kbfs/private/jakzale/org"))
+
+      (setq doom-font (font-spec :family "Cascadia Code PL" :size 16))))))
+
 
 ;; Using a single file for gtd
 (setq +org-capture-todo-file "gtd.org")
@@ -69,7 +86,7 @@
         ;; ("ot" "Project todo" entry #'+org-capture-central-project-todo-file "* TODO %?\n %i\n %a" :heading "Tasks" :prepend nil)
         ;; ("on" "Project notes" entry #'+org-capture-central-project-notes-file "* %U %?\n %i\n %a" :heading "Notes" :prepend t)
         ;; ("oc" "Project changelog" entry #'+org-capture-central-project-changelog-file "* %U %?\n %i\n %a" :heading "Changelog" :prepend t)
-        ))
+       ))
 
 (after! org
   (setq org-capture-templates jakzale/org-capture-templates))
