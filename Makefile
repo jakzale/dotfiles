@@ -1,9 +1,20 @@
-.PHONY: update zsh emacs neovim doom
+.PHONY: update zsh emacs neovim doom init
 
 doom = emacs/.emacs.d/bin/doom
 
 update:
 	git submodule update --recursive --checkout --remote --jobs 8
+
+init:
+	# Init git
+	mkdir -p ~/Developer ~/IOHK ~/Pozitive
+	stow -v git
+	# Init fonts
+	mkdir -p ~/.local/share/fonts
+	stow -v fonts
+	# Init emacs
+	mkdir -p ~/.local/bin
+	stow -v emacs
 
 zsh:
 	git add zsh
