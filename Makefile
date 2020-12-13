@@ -1,10 +1,10 @@
-.PHONY: update zsh emacs neovim doom init
-
 doom = emacs/.emacs.d/bin/doom
 
+.PHONY: update
 update:
 	git submodule update --recursive --checkout --remote --jobs 8
 
+.PHONY: init
 init:
 	# Init git
 	mkdir -p ~/Developer ~/IOHK ~/Pozitive
@@ -16,18 +16,27 @@ init:
 	mkdir -p ~/.local/bin
 	stow -v emacs
 
+.PHONY: zsh
 zsh:
 	git add zsh
 	git commit -m "[zsh] update oh my zsh"
 
+.PHONY: emacs
 emacs:
 	git add emacs
 	git commit -m "[emacs] update doom emacs"
 
+.PHONY: fish
+fish:
+	git add fish
+	git commit -m "[fish] update oh my fish"
+
+.PHONY: neovim
 neovim:
 	git add neovim
 	git commit -m "[neovim] update packages"
 
+.PHONY: doom
 doom:
 	$(doom) clean
 	$(doom) sync
