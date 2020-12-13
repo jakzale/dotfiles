@@ -1,87 +1,92 @@
-[submodule ".emacs.d"]
-	path = emacs/.emacs.d
-	url = git@github.com:hlissner/doom-emacs.git
+# Emacs
+[submodule "hlissner/doom-emacs"]
 	branch = develop
-[submodule ".oh-my-zsh"]
-	path = zsh/.oh-my-zsh
-	url = git@github.com:ohmyzsh/ohmyzsh.git
-[submodule ".config/nvim/pack/jakzale/start/vim-scriptease"]
-	path = neovim/.config/nvim/pack/jakzale/start/scriptease
-	url = https://github.com/tpope/vim-scriptease.git
-[submodule ".config/nvim/pack/jakzale/opt/matchit"]
-	path = neovim/.config/nvim/pack/jakzale/opt/matchit
-	url = https://github.com/chrisbra/matchit.git
-[submodule ".config/nvim/pack/jakzale/start/sensible"]
-	path = neovim/.config/nvim/pack/jakzale/start/sensible
-	url = https://github.com/tpope/vim-sensible.git
-[submodule ".config/nvim/pack/jakzale/start/fugitive"]
-	path = neovim/.config/nvim/pack/jakzale/start/fugitive
-	url = https://github.com/tpope/vim-fugitive.git
-[submodule ".config/nvim/pack/jakzale/start/projectionist"]
-	path = neovim/.config/nvim/pack/jakzale/start/projectionist
-	url = https://github.com/tpope/vim-projectionist.git
-[submodule ".config/nvim/pack/jakzale/start/dispatch"]
-	path = neovim/.config/nvim/pack/jakzale/start/dispatch
-	url = https://github.com/tpope/vim-dispatch.git
-[submodule ".config/nvim/pack/jakzale/start/surround"]
-	path = neovim/.config/nvim/pack/jakzale/start/surround
-	url = https://github.com/tpope/vim-surround.git
-[submodule ".config/nvim/pack/jakzale/start/repeat"]
-	path = neovim/.config/nvim/pack/jakzale/start/repeat
-	url = https://github.com/tpope/vim-repeat
-[submodule ".config/nvim/pack/jakzale/start/speeddating"]
-	path = neovim/.config/nvim/pack/jakzale/start/speeddating
-	url = https://github.com/tpope/vim-speeddating.git
-[submodule ".config/nvim/pack/jakzale/start/obsession"]
-	path = neovim/.config/nvim/pack/jakzale/start/obsession
-	url = https://github.com/tpope/vim-obsession.git
-[submodule ".config/nvim/pack/jakzale/start/eunuch"]
-	path = neovim/.config/nvim/pack/jakzale/start/eunuch
-	url = https://github.com/tpope/vim-eunuch.git
-[submodule ".config/nvim/pack/jakzale/start/deoplete"]
-	path = neovim/.config/nvim/pack/jakzale/start/deoplete
-	url = https://github.com/Shougo/deoplete.nvim.git
-[submodule ".config/nvim/pack/jakzale/start/gitgutter"]
+	path = emacs/.emacs.d
+	url = https://github.com/hlissner/doom-emacs.git
+# NeoVim
+[submodule "airblade/vim-gitgutter"]
 	path = neovim/.config/nvim/pack/jakzale/start/gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
-[submodule ".config/nvim/pack/jakzale/start/LanguageClient"]
+[submodule "autozimu/LanguageClient-neovim"]
+	branch = next
 	path = neovim/.config/nvim/pack/jakzale/start/LanguageClient
 	url = https://github.com/autozimu/LanguageClient-neovim.git
-	branch = next
-[submodule ".config/nvim/pack/jakzale/start/numbertoggle"]
-	path = neovim/.config/nvim/pack/jakzale/start/numbertoggle
-	url = https://github.com/jeffkreeftmeijer/vim-numbertoggle
-	ignore = untracked
-[submodule ".config/nvim/pack/jakzale/start/onedark"]
-	path = neovim/.config/nvim/pack/jakzale/opt/onedark
-	url = https://github.com/joshdick/onedark.vim
-[submodule ".config/nvim/pack/jakzale/start/fzf"]
-	path = neovim/.config/nvim/pack/jakzale/start/fzf
-	url = https://github.com/junegunn/fzf.vim
-[submodule ".config/nvim/pack/jakzale/start/lsp"]
-	path = neovim/.config/nvim/pack/jakzale/opt/lsp
-	url = https://github.com/neovim/nvim-lsp
-[submodule ".config/nvim/pack/jakzale/start/better-whitespace"]
-	path = neovim/.config/nvim/pack/jakzale/start/better-whitespace
-	url = https://github.com/ntpeters/vim-better-whitespace
-[submodule ".config/nvim/pack/jakzale/start/mundo"]
-	path = neovim/.config/nvim/pack/jakzale/start/mundo
-	url = https://github.com/simnalamburt/vim-mundo
-[submodule ".config/nvim/pack/jakzale/start/tcomment"]
-	path = neovim/.config/nvim/pack/jakzale/start/tcomment
-	url = https://github.com/tomtom/tcomment_vim
-[submodule ".config/nvim/pack/jakzale/start/lightline"]
+[submodule "chrisbra/matchit"]
+	path = neovim/.config/nvim/pack/jakzale/opt/matchit
+	url = https://github.com/chrisbra/matchit.git
+[submodule "itchyny/lightline.vim"]
 	path = neovim/.config/nvim/pack/jakzale/start/lightline
 	url = https://github.com/itchyny/lightline.vim
-[submodule ".config/nvim/pack/jakzale/start/polyglot"]
+[submodule "jceb/vim-orgmode"]
+	path = neovim/.config/nvim/pack/jakzale/start/orgmode
+	url = https://github.com/jceb/vim-orgmode.git
+[submodule "jeffkreeftmeijer/vim-numbertoggle"]
+	ignore = untracked
+	path = neovim/.config/nvim/pack/jakzale/start/numbertoggle
+	url = https://github.com/jeffkreeftmeijer/vim-numbertoggle
+[submodule "joshdick/onedark.vim"]
+	path = neovim/.config/nvim/pack/jakzale/opt/onedark
+	url = https://github.com/joshdick/onedark.vim
+[submodule "junegunn/fzf.vim"]
+	path = neovim/.config/nvim/pack/jakzale/start/fzf
+	url = https://github.com/junegunn/fzf.vim
+[submodule "kasio/neoterm"]
+	path = neovim/.config/nvim/pack/jakzale/start/neoterm
+	url = https://github.com/kassio/neoterm.git
+[submodule "neovim/nvim-lsp"]
+	path = neovim/.config/nvim/pack/jakzale/opt/lsp
+	url = https://github.com/neovim/nvim-lsp
+[submodule "ntpeters/vim-better-whitespace"]
+	path = neovim/.config/nvim/pack/jakzale/start/better-whitespace
+	url = https://github.com/ntpeters/vim-better-whitespace
+[submodule "sheerun/vim-polyglot"]
 	path = neovim/.config/nvim/pack/jakzale/start/polyglot
 	url = https://github.com/sheerun/vim-polyglot
-[submodule "fish/.local/share/omf"]
+[submodule "Shougo/deoplete.nvim"]
+	path = neovim/.config/nvim/pack/jakzale/start/deoplete
+	url = https://github.com/Shougo/deoplete.nvim.git
+[submodule "simnalamburt/vim-mundo"]
+	path = neovim/.config/nvim/pack/jakzale/start/mundo
+	url = https://github.com/simnalamburt/vim-mundo
+[submodule "tomtom/tcomment_vim"]
+	path = neovim/.config/nvim/pack/jakzale/start/tcomment
+	url = https://github.com/tomtom/tcomment_vim
+[submodule "tpope/vim-dispatch"]
+	path = neovim/.config/nvim/pack/jakzale/start/dispatch
+	url = https://github.com/tpope/vim-dispatch.git
+[submodule "tpope/vim-eunuch"]
+	path = neovim/.config/nvim/pack/jakzale/start/eunuch
+	url = https://github.com/tpope/vim-eunuch.git
+[submodule "tpope/vim-fugitive"]
+	path = neovim/.config/nvim/pack/jakzale/start/fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "tpope/vim-repeat"]
+	path = neovim/.config/nvim/pack/jakzale/start/repeat
+	url = https://github.com/tpope/vim-repeat
+[submodule "tpope/vim-obsession"]
+	path = neovim/.config/nvim/pack/jakzale/start/obsession
+	url = https://github.com/tpope/vim-obsession.git
+[submodule "tpope/vim-projectionist"]
+	path = neovim/.config/nvim/pack/jakzale/start/projectionist
+	url = https://github.com/tpope/vim-projectionist.git
+[submodule "tpope/vim-scriptease"]
+	path = neovim/.config/nvim/pack/jakzale/start/scriptease
+	url = https://github.com/tpope/vim-scriptease.git
+[submodule "tpope/vim-sensible"]
+	path = neovim/.config/nvim/pack/jakzale/start/sensible
+	url = https://github.com/tpope/vim-sensible.git
+[submodule "tpope/vim-speeddating"]
+	path = neovim/.config/nvim/pack/jakzale/start/speeddating
+	url = https://github.com/tpope/vim-speeddating.git
+[submodule "tpope/vim-surround"]
+	path = neovim/.config/nvim/pack/jakzale/start/surround
+	url = https://github.com/tpope/vim-surround.git
+# Oh My Fish
+[submodule "oh-my-fish/oh-my-fish"]
 	path = fish/.local/share/omf
 	url = https://github.com/oh-my-fish/oh-my-fish.git
-[submodule "neovim/.config/nvim/pack/jakzale/start/neoterm"]
-	path = neovim/.config/nvim/pack/jakzale/start/neoterm
-	url = git@github.com:kassio/neoterm.git
-[submodule "neovim/.config/nvim/pack/jakzale/start/orgmode"]
-	path = neovim/.config/nvim/pack/jakzale/start/orgmode
-	url = git@github.com:jceb/vim-orgmode.git
+# Oh My Zsh
+[submodule "ohmyzsh/ohmyzsh"]
+	path = zsh/.oh-my-zsh
+	url = https://github.com/ohmyzsh/ohmyzsh.git
+
