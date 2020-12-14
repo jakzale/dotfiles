@@ -1,39 +1,10 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-function pathify () {
-    local entry="$1"
-    local current=("${(@s/:/)PATH}")
-
-    if [[ ${current[(ie)${entry}]} -gt ${#current} ]]; then
-        export PATH="$entry:$PATH"
-    fi
-}
-
-# Setting up $PATH and other variables
-
-# include cargo if it exists
-if [ -d "$HOME/.cargo/bin" ] ; then
-    pathify "$HOME/.cargo/bin"
-fi
-
-# include go if it exists
-if [ -d "$HOME/.local/go" ] ; then
-    pathify "$HOME/.local/go/bin"
-    export GOPATH="$HOME/Developer/go"
-fi
-
-# Add .local bin
-pathify "$HOME/.local/bin"
-
-# Add dotnet tools
-pathify "$HOME/.dotnet/tools"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/jakub/.oh-my-zsh"
 
-# EDITOR
-export EDITOR='nvim'
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -99,7 +70,8 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git stack nvm kubectl minikube helm z)
+# plugins=(git stack nvm kubectl minikube helm z)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -129,9 +101,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Export kubernetes config
-export KUBECONFIG="$HOME/.config/kube/pozitive-kubeconfig.yaml:$HOME/.kube/config"
+# EDITOR
+export EDITOR='nvim'
 
+source "$HOME/.cargo/env"
 
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/bin/mcli mcli
+export PATH="$HOME/.ghcup/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
