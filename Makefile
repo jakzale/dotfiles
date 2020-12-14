@@ -1,8 +1,10 @@
 doom = emacs/.emacs.d/bin/doom
 
-.PHONY: update
-update:
-	git submodule update --recursive --checkout --remote --jobs 8
+.PHONY: init-dirs
+init-dirs:
+	mkdir -p ~/Developer ~/IOHK ~/Pozitive
+	mkdir -p ~/.local/share/fonts
+	mkdir -p ~/.local/bin
 
 .PHONY: init
 init:
@@ -15,6 +17,11 @@ init:
 	# Init emacs
 	mkdir -p ~/.local/bin
 	stow -v emacs
+
+.PHONY: update
+update:
+	git submodule update --recursive --checkout --remote --jobs 8
+
 
 .PHONY: zsh
 zsh:
