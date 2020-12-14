@@ -3,6 +3,10 @@
 	branch = develop
 	path = emacs/.emacs.d
 	url = https://github.com/hlissner/doom-emacs.git
+# FZF
+[submodule "junegunn/fzf"]
+	path = fzf/.fzf
+	url = https://github.com/junegunn/fzf.git
 # NeoVim
 [submodule "airblade/vim-gitgutter"]
 	path = neovim/.config/nvim/pack/jakzale/start/gitgutter
