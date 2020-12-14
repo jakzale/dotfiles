@@ -55,3 +55,8 @@ doom:
 	$(doom) sync -u
 	$(doom) compile
 
+.PHONY: fzf
+fzf:
+	git add fzf
+	git commit -m "[fzf] update fzf"
+	cd fzf/.fzf && ./install --bin
