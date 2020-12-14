@@ -44,6 +44,10 @@ neovim:
 	git add neovim
 	git commit -m "[neovim] update packages"
 
+.PHONY: neovim-helptags
+neovim-helptags:
+	nvim -es +helptags\ ALL +q || echo "ignored some errors during :helptags ALL"
+
 .PHONY: doom
 doom:
 	$(doom) clean
