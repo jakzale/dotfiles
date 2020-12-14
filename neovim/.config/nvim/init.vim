@@ -46,8 +46,9 @@ nnoremap <leader>/ <cmd>nohlsearch<cr>
 
 nnoremap <leader>ut <cmd>MundoToggle<cr>
 
-" FZF
-" source /usr/share/doc/fzf/examples/fzf.vim
+" FZF dependency
+source /usr/share/doc/fzf/examples/fzf.vim
+
 nnoremap <leader><leader> <cmd>Files<cr>
 
 nnoremap <leader>pf <cmd>Files<cr>
