@@ -7,7 +7,7 @@ update:
 .PHONY: init-dirs
 init-dirs:
 	mkdir -p ~/Developer ~/IOHK ~/Pozitive
-	mkdir -p ~/.local/share/fonts
+	mkdir -p ~/.local/share/fonts ~/.local/share/icons
 	mkdir -p ~/.local/bin
 
 .PHONY: init

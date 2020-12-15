@@ -1,0 +1,14 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Name=Personal Chromium
+GenericName=Web Browser
+Comment=Access the Internet
+StartupWMClass=personal-chromium
+Exec=/home/jakub/.local/bin/personal-chromium %U
+StartupNotify=true
+Terminal=false
+Icon=personal-chromium
+Type=Application
+Categories=Network;WebBrowser;
+MimeType=text/html;text/xml;application/xhtml_xml;x-scheme-handler/http;x-scheme-handler/https;
