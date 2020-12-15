@@ -13,6 +13,10 @@
 	editor = nvim
     excludesfile = ~/.gitignoreglobal
 
+# Host-specific configuration
+[include]
+	path = ~/.gitconfig.local
+
 # Private projects
 [includeIf "gitdir:~/Developer/"]
 	path = ~/Developer/.gitconfig
