@@ -1,5 +1,4 @@
-" filetype plugin indent on
-" syntax enable
+" vim: set fdm=marker :
 let g:python3_host_prog='/usr/bin/python3'
 
 set undofile
@@ -46,25 +45,31 @@ nnoremap <leader>/ <cmd>nohlsearch<cr>
 
 nnoremap <leader>ut <cmd>MundoToggle<cr>
 
-" FZF dependency
-source /usr/share/doc/fzf/examples/fzf.vim
+" FZF {{{
+set rtp+=~/.fzf
 
-nnoremap <leader><leader> <cmd>Files<cr>
+" A simple attempt to implement quick file switcher
+nnoremap <leader><leader> :call fzf#vim#grep(
+    \ 'rg --files',
+    \ fzf#vim#with_preview())<cr>
 
 nnoremap <leader>pf <cmd>Files<cr>
 nnoremap <leader>pb <cmd>Buffers<cr>
 nnoremap <leader>ps <cmd>Rg<cr>
+" }}}
 
-" Fugitive
+" Fugitive {{{
 nnoremap <leader>gg <cmd>Gstatus<cr>
+" }}}
 
-" Project sidebar
+" Project Sidebar {{{
 let g:netrw_list_hide=netrw_gitignore#Hide().'^.git/$'
 nnoremap <leader>le <cmd>20Lex<cr>
+" }}}
 
-" LSP
+" LSP {{{
 let g:LanguageClient_serverCommands = {
-    \ 'rust'    : ['rustup', 'run', 'stable', 'rls'],
+    \ 'rust'    : ['rust-analyzer'],
     \ 'haskell' : ['haskell-language-server-wrapper', '--lsp'],
     \ }
 
@@ -98,10 +103,13 @@ augroup LSP
     autocmd FileType * call s:LC_maps()
 augroup END
 
+" }}}
+
 " Deoplete
 let g:deoplete#enable_at_startup = 1
 
 " Markdown
+" TODO:  Not sure if g:markdown_folding makes sense here
 let g:markdown_folding = 1
 let g:markdown_fenced_languages = ['vim', 'bash=sh']
 
