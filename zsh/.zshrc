@@ -110,4 +110,10 @@ export PATH="$HOME/.ghcup/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:$HOME/.fzf/bin"
 
+rust-analyzer-upgrade () {
+    local rust_analyzer=$(mktemp --tmpdir rust-analyzer.XXX)
+    curl -L https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-linux > "${rust_analyzer}"
+    install -m 755 "${rust_analyzer}" "$HOME/.local/bin/rust-analyzer"
+    rm "${rust_analyzer}"
+}
 
