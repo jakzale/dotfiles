@@ -110,6 +110,7 @@ export PATH="$HOME/.ghcup/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:$HOME/.fzf/bin"
 
+# TODO:  Refactor this as a separate script
 rust-analyzer-upgrade () {
     local rust_analyzer=$(mktemp --tmpdir rust-analyzer.XXX)
     curl -L https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-linux > "${rust_analyzer}"
