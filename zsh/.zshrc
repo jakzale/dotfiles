@@ -108,4 +108,6 @@ source "$HOME/.cargo/env"
 
 export PATH="$HOME/.ghcup/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$PATH:$HOME/.fzf/bin"
+
 
