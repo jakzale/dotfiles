@@ -82,8 +82,8 @@ let g:LanguageClient_selectionUI = "fzf"
 
 function! s:LC_maps()
     if has_key(g:LanguageClient_serverCommands, &filetype)
-        nnoremap <buffer> <silent> K           <cmd>call LanguageClient#textDocument_hover()<cr>
-        nnoremap <buffer> <silent> gd          <cmd>call LanguageClient#textDocument_definition()<cr>
+        nnoremap <buffer> <silent> K          <cmd>call LanguageClient#textDocument_hover()<cr>
+        nnoremap <buffer> <silent> gd         <cmd>call LanguageClient#textDocument_definition()<cr>
         nnoremap <buffer> <silent> <leader>lr <cmd>call LanguageClient#textDocument_rename()<cr>
 
         " nnoremap <F5> :call LanguageClient_contextMenu()<CR>
@@ -95,6 +95,7 @@ function! s:LC_maps()
         nnoremap <buffer> <silent> <leader>lb :call LanguageClient#textDocument_references()<cr>
         nnoremap <buffer> <silent> <leader>la :call LanguageClient#textDocument_codeAction()<cr>
         nnoremap <buffer> <silent> <leader>ls :call LanguageClient#textDocument_documentSymbol()<cr>
+        nnoremap <buffer> <silent> <leader>lc :call LanguageClient#handleCodeLensAction()<cr>
     endif
 endfunction
 
