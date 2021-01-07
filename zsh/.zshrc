@@ -104,7 +104,7 @@ source $ZSH/oh-my-zsh.sh
 # EDITOR
 export EDITOR='nvim'
 
-source "$HOME/.cargo/env"
+# source "$HOME/.cargo/env"
 
 export PATH="$HOME/.ghcup/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
