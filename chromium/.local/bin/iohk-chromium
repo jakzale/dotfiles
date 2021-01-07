@@ -5,10 +5,10 @@ set -x
 
 # What kind of browser we are looking for
 CHROMIUM_NAME="chromium"
-CHROMIUM_PATH=$(which chromium)
+CHROMIUM_PATH=$(which chromium-browser)
 echo "found browser ${CHROMIUM_NAME} at ${CHROMIUM_PATH}"
 
-CHROMIUM_PREFERENCES_PATH="$HOME/snap/chromium/common/chromium/"
+CHROMIUM_PREFERENCES_PATH="$HOME/.config/chromium/"
 CHROMIUM_PROFILE="IOHK"
 CHROMIUM_PROFILE_DIR=$(rg -e '"name":"'"${CHROMIUM_PROFILE}"'"' -g '*Preferences' -l "${CHROMIUM_PREFERENCES_PATH}" -0 | xargs -0 dirname | xargs -0 basename)
 echo "found profile ${CHROMIUM_PROFILE} at ${CHROMIUM_PROFILE_DIR}"
