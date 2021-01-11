@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -ueo pipefail
+set -x
+
+# Starting chromium with wayland options
+exec /usr/bin/chromium-browser \
+	--use-cmd-decoder=validating \
+	--use-gl=desktop \
+	"$@"
