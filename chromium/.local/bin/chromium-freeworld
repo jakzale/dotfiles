@@ -3,7 +3,7 @@ set -ueo pipefail
 set -x
 
 # Starting chromium with wayland options
-exec /usr/bin/chromium-browser \
+exec /usr/bin/chromium-freeworld \
 	--use-cmd-decoder=validating \
 	--use-gl=desktop \
 	"$@"

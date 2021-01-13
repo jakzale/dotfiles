@@ -5,7 +5,7 @@ set -x
 
 # What kind of browser we are looking for
 CHROMIUM_NAME="chromium"
-CHROMIUM_PATH=$(which chromium-browser)
+CHROMIUM_PATH=$(which chromium-freeworld)
 echo "found browser ${CHROMIUM_NAME} at ${CHROMIUM_PATH}"
 
 CHROMIUM_PREFERENCES_PATH="$HOME/.config/chromium/"
