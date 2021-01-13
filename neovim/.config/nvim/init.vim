@@ -3,7 +3,7 @@ let g:python3_host_prog='/usr/bin/python3'
 
 set undofile
 set hidden
-set guifont=Cascadia\ Code\ PL:h16
+set guifont=Cascadia\ Code\ PL:h14
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -46,12 +46,13 @@ nnoremap <leader>/ <cmd>nohlsearch<cr>
 nnoremap <leader>ut <cmd>MundoToggle<cr>
 
 " FZF {{{
-set rtp+=~/.fzf
+" set rtp+=~/.fzf
 
 " A simple attempt to implement quick file switcher
-nnoremap <leader><leader> :call fzf#vim#grep(
-    \ 'rg --files',
-    \ fzf#vim#with_preview())<cr>
+" nnoremap <leader><leader> :call fzf#vim#grep(
+"     \ 'rg --files',
+"     \ fzf#vim#with_preview())<cr>
+nnoremap <leader><leader> <cmd>Files<cr>
 
 nnoremap <leader>pf <cmd>Files<cr>
 nnoremap <leader>pb <cmd>Buffers<cr>
