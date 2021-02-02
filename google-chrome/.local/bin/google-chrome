@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+set -ueo pipefail
+set -x
+
+# A simple wrapper to open google chrome:
+# - with a certain profile, and
+# - automatically apply wayland fix
+
+ARGS=()
+for i in "$@"
+do
+    case $i in
+        --profile=*)
+            PROFILE="${i#*=}"
+            ;;
+        *)
+            ARGS+=("$i")
+            ;;
+    esac
+done
+# Restore arguments
+set -- "${ARGS[@]}"
+ARGS=()
+
+# Temporary fix for running on wayland
+if [[ -n "${WAYLAND_DISPLAY:-}" ]]; then
+    ARGS+=("--use-cmd-decoder=validating")
+    ARGS+=("--use-gl=desktop")
+fi || true
+
+PROFILE="${PROFILE:-}"
+
+if [[ -n "${PROFILE}" ]]; then
+    CONF_DIR="$HOME/.config/google-chrome/"
+    PROFILE_DIR=$(rg -e '"name":"'"${PROFILE}"'"' -g '*Preferences' -l "${CONF_DIR}" -0)
+    PROFILE_DIR="${PROFILE_DIR:-}"
+
+    if [[ -n "${PROFILE_DIR}" ]]; then
+        PROFILE_DIR=$(echo "$PROFILE_DIR" | head -n 1 | xargs -0 dirname | xargs -0 basename)
+        ARGS+=("--profile-directory=${PROFILE_DIR}")
+    fi || true
+fi || true
+
+exec /usr/bin/google-chrome-stable \
+    "${ARGS[@]}" \
+    "$@"
+

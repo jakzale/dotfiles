@@ -8,10 +8,10 @@ GenericName=Web Browser
 # Gnome and KDE 3 uses Comment.
 Comment=Access the Internet
 StartupWMClass=Google-chrome
-Exec=/home/jakub/.local/bin/iohk-chrome %U
+Exec=/home/jakub/.local/bin/google-chrome --profile=IOHK %U
 StartupNotify=true
 Terminal=false
-Icon=google-chrome
+Icon=iohk-chrome
 Type=Application
 Categories=Network;WebBrowser;
 MimeType=application/pdf;application/rdf+xml;application/rss+xml;application/xhtml+xml;application/xhtml_xml;application/xml;image/gif;image/jpeg;image/png;image/webp;text/html;text/xml;x-scheme-handler/ftp;x-scheme-handler/http;x-scheme-handler/https;
