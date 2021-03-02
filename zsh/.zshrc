@@ -104,17 +104,15 @@ source $ZSH/oh-my-zsh.sh
 # EDITOR
 export EDITOR='nvim'
 
-# source "$HOME/.cargo/env"
+# Cargo
+source "$HOME/.cargo/env"
+
+# Nix
+if [ -e /home/jakub/.nix-profile/etc/profile.d/nix.sh ]; then . /home/jakub/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
 export PATH="$HOME/.ghcup/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:$HOME/.fzf/bin"
 
-# TODO:  Refactor this as a separate script
-rust-analyzer-upgrade () {
-    local rust_analyzer=$(mktemp --tmpdir rust-analyzer.XXX)
-    curl -L https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-linux > "${rust_analyzer}"
-    install -m 755 "${rust_analyzer}" "$HOME/.local/bin/rust-analyzer"
-    rm "${rust_analyzer}"
-}
+# Nix
 
