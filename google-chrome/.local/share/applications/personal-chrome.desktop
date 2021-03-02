@@ -7,7 +7,7 @@ Name=Personal Chrome
 GenericName=Web Browser
 # Gnome and KDE 3 uses Comment.
 Comment=Access the Internet
-StartupWMClass=Google-chrome
+# StartupWMClass=Google-chrome
 Exec=/home/jakub/.local/bin/google-chrome --profile=Jakub %U
 StartupNotify=true
 Terminal=false
